@@ -1,8 +1,12 @@
 {
   "name": "Agatech_test",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Agatech_test",
   "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git://https://github.com/svm2001/Agatech_Test.git"
+  },
   "scripts": {
     "html": "gulp",
     "php": "gulp dev_php",
