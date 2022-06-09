@@ -1,0 +1,148 @@
+.discount {
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__img {
+        margin-right: 72px;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 100%;
+        }
+    }
+    //
+    &__running-container {
+
+    }
+    //
+    &__running-text {
+        width: 38ch;
+        white-space: nowrap;
+        font-size: 24px;
+        line-height: 24px;
+        color: $blue;
+        font-family: monospace;
+        overflow: hidden;
+        border-right: 3px solid $blue;
+        animation: flashing-border 0.75s step-end infinite, printing-text 7s steps(38) infinite;
+        margin-bottom: 125px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__text {
+        padding: 80px 0;
+    }
+
+    .button--discount {
+        visibility: hidden;
+        opacity: 0;
+        margin-bottom: 30px;
+    }
+
+    .button--discount.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__add {
+        width: 489px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+    @keyframes flashing-border {
+
+        0% {
+            border-color: $blue;
+        }
+
+        50% {
+            border-color: transparent;
+        }
+
+        100% {
+            border-color: $blue;
+        }
+    }
+
+    @keyframes printing-text {
+
+        from {
+            width: 0;
+        }
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .discount {
+        margin-top: 0;
+
+        &__wrapper {
+            justify-content: space-between;
+        }
+
+        &__img {
+            margin-right: 20px;
+        }
+
+        &__img, &__text {
+            flex-basis: 50%;
+        }
+
+        &__add {
+            width: 100%;
+            font-size: 12px;
+        }
+
+        .button--discount {
+            width: 300px;
+            font-size: 16px;
+            height: 37px;
+        }
+
+        &__running-text {
+            font-size: 16px;
+            letter-spacing: -1px;
+            margin-bottom: 30px;
+        }
+
+        .title--discount {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 710px) {
+
+    .discount {
+
+        &__wrapper {
+            flex-direction: column-reverse;
+        }
+
+        &__img {
+            margin-right: 0;
+            padding: 0 15%;
+        }
+
+        &__text {
+            padding: 20px 0;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .discount {
+        &__img {
+            padding: 0;
+        }
+    }
+}

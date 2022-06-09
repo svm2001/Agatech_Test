@@ -1,0 +1,18 @@
+.title--h2 {
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    color: $blue;
+    margin-bottom: 22px;
+    font-weight: 300;
+}
+
+.title--discount {
+    text-align: left;
+}
+
+@media (max-width: 1024px) {
+    .title--h2 {
+        font-size: 24px;
+    }
+}

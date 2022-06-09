@@ -1,0 +1,225 @@
+body.lock {
+    overflow: hidden;
+    //overflow-y: scroll;
+}
+
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(256,256,256,0.6);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all 0.6s ease 0s;
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
+        z-index: 5;
+    }
+
+    &.open .popup__content {
+        transform: translate(0, 0) scaleX(1);
+        opacity: 1;
+    }
+
+    &__body {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px;
+    }
+
+    &__content {
+        position: relative;
+        background-color: $white;
+        color: $blue;
+        max-width: 800px;
+        padding: 45px 30px;
+        margin-bottom: 1em;
+        transform: translate(0, -100%) scaleX(-1);
+        opacity: 0;
+        transition: $fast;
+        border-radius: 12px;
+    }
+
+    &__close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 20px;
+        width: 15px;
+        height: 15px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -10px;
+            background: url("/img/close-popup.svg") center center no-repeat;
+            background-size: 100%;
+            width: 25px;
+            height: 25px;
+            transition: $fast;
+        }
+
+        &:hover:before {
+            transform: rotate(180deg);
+
+        }
+    }
+
+    &__content {
+        text-align: center;
+    }
+    &__title {
+        margin-bottom: 50px;
+        font-size: 36px;
+        font-weight: 300;
+        text-align: center;
+    }
+    &__text {
+        margin-bottom: 50px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    form {
+        margin: auto;
+    }
+
+    a {
+        font-size: 22px;
+        display: block;
+        margin: 0 auto 30px;
+        transition: $fast;
+    }
+}
+
+// popup - get-kp
+
+.popup {
+
+    .popup__email-wrapper, .popup__tel-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 55px;
+    }
+
+    .popup-offer__title {
+        margin-bottom: 15px;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 300;
+    }
+
+    .popup__tel, .popup__email {
+        width: 450px;
+        margin: 0 auto;
+        border-bottom: 1px solid gray;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+    }
+
+    .popup__tel::placeholder, .popup__email::placeholder {
+        text-align: center;
+        font-size: 18px;
+        line-height: 20px;
+        color: #7F8389;
+
+    }
+
+    .popup__tel:focus, .popup__email:focus {
+        outline: 0;
+        outline-offset: 0;
+    }
+
+    .popup-offer__info {
+        color: #7F8389;
+        width: 450px;
+        margin: 0 auto 55px auto;
+
+    }
+
+    .popup-offer__recall {
+        color: $blue;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 15px;
+    }
+
+    .popup-offer__recall-link {
+        color: $black;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 300;
+        display: block;
+        margin-bottom: 80px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .popup {
+
+        &__content {
+            padding-top: 85px;
+        }
+
+        &__close {
+            top: 50px;
+        }
+
+        .popup__title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .popup__text {
+            font-size: 18px;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+    }
+
+    .popup__get-kp {
+
+        .popup__email-wrapper, .popup__tel-wrapper {
+            margin-bottom: 35px;
+        }
+
+        .popup__tel, .popup__email, .popup-offer__info {
+            width: 300px;
+        }
+
+        .popup-offer__info {
+            font-size: 12px;
+            margin: 0 auto 25px auto;
+        }
+
+        .popup-offer__title {
+            font-size: 18px;
+        }
+
+        .popup-offer__recall-link {
+            margin-bottom: 30px;
+        }
+
+        .popup-offer__recall {
+            margin-bottom: 0;
+        }
+    }
+}
