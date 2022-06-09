@@ -1,6 +1,5 @@
 node_modules
 build
 folders.txt
-package-lock.json
 yarn.lock
 process.json
