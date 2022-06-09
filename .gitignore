@@ -3,3 +3,4 @@ build
 folders.txt
 yarn.lock
 process.json
+.idea
