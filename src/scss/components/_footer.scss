@@ -1,0 +1,488 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+main {
+    flex: 1 0 auto;
+}
+.footer {
+    flex: 0 0 auto;
+}
+
+
+.footer {
+    background: #071121;
+    color: $white;
+
+    .footer__left-m {
+        display: none;
+    }
+
+    a {
+        display: block;
+        color: white;
+    }
+
+    &__wrapper {
+        width: 100%;
+        padding: 80px 0 45px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        flex-basis: 59%;
+        background: #131B28;
+        border-radius: 0 0 20px 20px;
+        padding: 5px 0 35px 50px;
+
+    }
+
+    &__left-line {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__cell {
+        position: relative;
+    }
+
+    &__left-cell--ul, &__left-cell--msc, &__left-cell--sah {
+        position: relative;
+        font-size: 24px;
+        line-height: 29px;
+
+        a {
+            transition: $fast;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 600;
+            color: #29C9D3;
+        }
+    }
+
+    &__left-cell {
+        padding: 20px;
+        flex-basis: 28%;
+    }
+
+    &__left-cell--ul:hover, &__left-cell--msc:hover, &__left-cell--sah:hover {
+
+        a {
+            color: #29C9D3;
+        }
+
+        p {
+            color: $white;
+        }
+    }
+
+    &__left-cell--ul:before {
+        content: 'Ульяновск';
+    }
+
+    &__left-cell--msc:before {
+        content: 'Москва';
+    }
+
+    &__left-cell--sah:before {
+        content: 'Южно-Сахалинск';
+    }
+
+    &__left-cell--ul:before, &__left-cell--msc:before, &__left-cell--sah:before {
+        position: absolute;
+        top: -50px;
+        left: -20px;
+        color: $white;
+        font-size: 18px;
+    }
+
+    &__left-cell--ul:after, &__left-cell--msc:after, &__left-cell--sah:after {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        width: 31px;
+        height: 31px;
+        background: url("/img/footer/tel.svg") center no-repeat;
+    }
+
+    &__left-cell--sah-pin:after, &__left-cell--msc-pin:after, &__left-cell--ul-pin:after {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: -22px;
+        width: 33px;
+        height: 33px;
+        background: url("/img/footer/pin.svg") center no-repeat;
+    }
+
+    &__mail-link:after {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: -43px;
+        width: 33px;
+        height: 33px;
+        background: url("/img/footer/mail.svg") center no-repeat;
+    }
+
+    &__mail {
+        margin-bottom: 80px;
+
+        a {
+            color: #29C9D3;
+            font-size: 16px;
+            line-height: 19px;
+            transition: $fast;
+        }
+
+        a:hover {
+            color: $white;
+        }
+    }
+
+    &__copyright {
+        color: #29C9D3;
+        font-size: 16px;
+        margin-left: -15px;
+    }
+
+    .footer__copyright-m {
+        display: none;
+    }
+
+    // правая часть
+
+    &__right {
+        position: relative;
+        flex-basis: 39%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__docs {
+        flex-basis: 100%;
+    }
+
+    &__social, &__brand {
+
+        .footer__right-line {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__social, &__brand, &__docs {
+        position: relative;
+    }
+
+    &__social:before {
+        content: 'Мы в соцсетях';
+        position: absolute;
+        top: -40px;
+        left: 30px;
+        font-size: 18px;
+    }
+
+    &__brand:before {
+        content: 'Бренд AGATECH';
+        position: absolute;
+        top: -40px;
+        left: 25px;
+        font-size: 18px;
+    }
+
+    &__docs:before {
+        content: 'Документы';
+        position: absolute;
+        top: -40px;
+        left: 35px;
+        font-size: 18px;
+    }
+
+    &__social, &__brand, &__docs {
+        background: #131B28;
+        border: 1px solid transparent;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    &__brand, &__social {
+        margin-bottom: 55px;
+    }
+
+    &__social {
+        padding: 15px 35px 15px 30px;
+        flex-basis: 40%;
+    }
+
+    &__brand {
+        padding: 15px 60px 15px 25px;
+        flex-basis: 55%;
+
+        a {
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            margin-right: 10px;
+        }
+    }
+
+    &__docs {
+        flex-basis: 100%;
+        padding: 10px 25px 0 25px;
+
+        a {
+            transition: $fast;
+        }
+
+        a:hover {
+            color: #2DB49B;
+        }
+
+
+        .footer__right-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .footer__right-line:nth-child(2), .footer__right-line:nth-child(3), .footer__right-line:nth-child(4) {
+
+            .footer__cell {
+                font-size: 12px;
+            }
+
+            .footer__cell:before {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 26px;
+                top: 0;
+                left: -30px;
+                background: url("/img/footer/file.svg");
+
+            }
+        }
+
+        .footer__cell {
+            flex-basis: 27%;
+            height: 36px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer__title-line {
+            color: #2DB49B;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 1700px) {
+    .footer__left {
+        padding: 5px 0 35px 50px;
+    }
+
+    .footer__left-cell {
+        flex-basis: 32%;
+    }
+
+    .footer__brand {
+        padding: 25px 30px 15px 25px;
+    }
+
+    .footer__social {
+        padding: 25px 15px 15px 15px;
+    }
+}
+
+@media (max-width: 1450px) {
+    .footer__wrapper {
+        flex-direction: column;
+    }
+
+    .footer__left {
+        margin-bottom: 75px;
+    }
+
+    .footer__social, .footer__brand {
+        flex-basis: 46.5%;
+    }
+
+    .footer__social {
+        padding: 19px 63px 15px;
+    }
+
+    .footer__brand {
+        padding: 19px 45px 15px 65px;
+    }
+}
+
+@media (max-width: 820px) {
+
+    .footer__left {
+        display: none;
+    }
+
+    .footer__wrapper {
+        padding: 40px 0 40px 0;
+    }
+
+    .footer__left-m {
+        display: flex!important;
+        flex-direction: column;
+        background: #131b28;
+        border-radius: 0 0 20px 20px;
+        margin-bottom: 60px;
+        padding-top: 25px;
+
+        .footer__left-line {
+            flex-direction: column;
+            padding-bottom: 45px
+        }
+
+        .footer__left-line:last-child {
+            padding-bottom: 0;
+        }
+
+        .footer__left-cell--ul:before {
+            display: none;
+        }
+
+        .footer__left-cell {
+            padding: 0 0 30px 60px;
+        }
+
+
+        .footer__left-cell--city {
+            font-size: 22px;
+            font-weight: 600;
+            padding-left: 20px;
+        }
+
+        .footer__left-cell--msc, .footer__left-cell--sah, .footer__left-cell--ul {
+            font-size: 18px;
+        }
+
+        .footer__left-cell--ul-pin:after, {
+            top: -5px;
+            left: 17px;
+        }
+
+        .footer__left-cell--ul:after {
+            top: 8px;
+            left: 18px;
+        }
+
+        .footer__social:before, .footer__brand:before,
+        .footer__left-m .footer__left-cell--ul:after, {
+            left: 0;
+        }
+    }
+
+    .footer__brand {
+        padding: 20px;
+    }
+
+    .footer__copyright-m {
+        display: block!important;
+        margin-left: 0;
+        margin-bottom: 25px;
+        padding-left: 5px;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 603px) {
+
+    .footer__social, .footer__brand {
+        flex-basis: 100%;
+        padding: 20px;
+
+        .footer__right-line {
+            justify-content: space-evenly;
+        }
+    }
+
+    .footer__social:before, .footer__brand:before, .footer__docs:before {
+        left: 0;
+    }
+}
+
+@media (max-width: 470px) {
+    .footer__docs {
+        padding: 0;
+    }
+
+    .footer__title-line {
+        padding-left: 5px!important;
+    }
+
+    .footer__docs .footer__right-line:nth-child(2) .footer__cell,
+    .footer__docs .footer__right-line:nth-child(3) .footer__cell,
+    .footer__docs .footer__right-line:nth-child(4) .footer__cell {
+        font-size: 8px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

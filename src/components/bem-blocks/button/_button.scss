@@ -38,3 +38,23 @@
     font-size: 24px;
     font-weight: 600;
 }
+
+.button--portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 60px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    width: 457px;
+}
+
+@media (max-width: 600px) {
+    .button--portfolio {
+        width: 300px;
+        font-size: 14px;
+        height: 50px;
+    }
+}
