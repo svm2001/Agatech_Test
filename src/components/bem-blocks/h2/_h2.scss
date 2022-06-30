@@ -3,7 +3,7 @@
     line-height: 43px;
     text-align: center;
     color: $blue;
-    margin-bottom: 22px;
+    margin-bottom: 30px;
     font-weight: 300;
 }
 
@@ -14,5 +14,7 @@
 @media (max-width: 1024px) {
     .title--h2 {
         font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 30px;
     }
 }

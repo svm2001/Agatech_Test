@@ -1,18 +1,18 @@
 .button {
-    display: block;
-    padding: 9px 25px;
+    display: inline-block;
+    padding: 14px;
     background-color: $blue;
     border-radius: 40px;
     color: $white;
     text-align: center;
     transition: $fast;
     border: 1px solid transparent;
+    font-size: 21px;
 
     &:hover {
         background: $white;
         color: $blue;
         border: 1px solid $blue;
-        font-weight: 600;
     }
 
     &--tariffs {
@@ -25,6 +25,25 @@
         font-size: 24px;
         line-height: 28px;
         margin: auto;
+    }
+
+    &--white {
+        background-color: $white;
+        color: $blue;
+        border: 1px solid $blue;
+        transition: .3s;
+
+        &:hover {
+            background-color: $blue;
+            color: $white;
+        }
+
+    }
+}
+
+@media (max-width: 1024px) {
+    .button {
+        font-size: 18px;
     }
 }
 

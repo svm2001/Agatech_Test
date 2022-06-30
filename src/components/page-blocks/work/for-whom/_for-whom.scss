@@ -1,0 +1,114 @@
+.for-whom {
+    &__wrapper {
+        display: flex;
+    }
+
+    &__left {
+        min-width: calc(500px + (750 - 500) * ((100vw - 1200px) / (1920 - 1200)));
+        flex-basis: 50%;
+        background: #FAFAFA;
+        padding: 60px
+        calc(20px + (60 - 20) * ((100vw - 1200px) / (1920 - 1200)))
+        30px
+        calc(20px + (170 - 20) * ((100vw - 1200px) / (1920 - 1200))) ;
+    }
+
+    &__text {
+        font-size: 24px;
+        color: $blue;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &__tabs__nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .tabs__nav-btn {
+        position: relative;
+        font-size: 16px;
+        color:$black;
+        margin-bottom: 12px;
+        padding: 7px 7px 7px 40px;
+        border: 1px solid transparent;
+        border-radius: 20px;
+        background: transparent;
+        transition: .3s;
+        flex-basis: 45%;
+        width: 100%;
+        text-align: left;
+
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+        }
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    }
+
+    .tabs__nav-btn:nth-child(odd) {
+        margin-right: 20px;
+    }
+
+    .tabs__nav-btn.active {
+        background: $blue;
+        border: 1px solid $blue;
+        color: $white;
+
+        svg {
+            path {
+                fill: white;
+            }
+        }
+    }
+
+    .btn-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    &__right {
+        min-width: 0;
+        flex-basis: 50%;
+        max-height: 711px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 1700px) {
+    .for-whom {
+        .slider__item-bg img {
+            width: 100%;
+        }
+
+        //&__left {
+        //    min-width: 525px;
+        //    flex-basis: 0;
+        //    padding-right: 30px;
+        //}
+        //
+        //&__right {
+        //    flex-basis: 100%;
+        //    width: 100%;
+        //}
+
+        h2 {
+            margin-bottom: 20px;
+            //text-align: left;
+        }
+
+        &__text {
+            margin-bottom: 20px;
+        }
+
+        .tabs__nav-btn {
+            margin-bottom: 15px;
+        }
+    }
+}

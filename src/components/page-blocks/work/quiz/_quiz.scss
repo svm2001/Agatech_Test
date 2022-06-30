@@ -1,0 +1,71 @@
+.quiz {
+    &__wrapper {
+        display: flex;
+        width: 540px;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    &__item {
+        flex-basis: 22%;
+        height: 5px;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    &__item:nth-child(1) {
+        background: #8077A4;
+    }
+    &__item:nth-child(2) {
+        background: #675F88;
+    }
+    &__item:nth-child(3) {
+        background: #554D70;
+    }
+    &__item:nth-child(4) {
+        background: #3A3450;
+    }
+
+    &__text {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &__btns {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+
+        a:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .quiz {
+        &__wrapper {
+            width: 100%;
+            padding: 0 30px;
+            margin: 0 auto 20px;
+        }
+
+        &__text {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        &__btns {
+            flex-direction: column;
+
+            a:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

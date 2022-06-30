@@ -1,0 +1,41 @@
+.about {
+
+    &__text {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+        width: 1094px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1224px) {
+
+    .about {
+
+        &__text {
+            font-size: 18px;
+            line-height: 24px;
+            width: 100%;
+        }
+    }
+}
+
+.links__list {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    a {
+        color: black;
+        margin-bottom: 20px;
+        font-size: 28px;
+        transition: .3s;
+
+        &:hover {
+            color: #7F8389;
+        }
+    }
+}

@@ -1,0 +1,158 @@
+.rounds__list {
+    padding-top: 100px;
+    padding-bottom: 120px;
+    display: flex;
+    justify-content: space-between;
+    background: #3C019C;
+    .rounds__img {
+        object-fit: cover;
+        max-height: 407px;
+        transition: $fast;
+        animation: animate 30s linear infinite forwards;
+    }
+    .rounds__item {
+        position: relative;
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            max-width: min-content;
+            text-align: center;
+            color: $white;
+        }
+    }
+
+    .rounds__item--1:before {
+        content: 'Разработка сайтов';
+    }
+
+    .rounds__item--2:before {
+        content: 'Автоматизация бизнеса';
+    }
+
+    .rounds__item--3:before {
+        content: 'Интернет-маркетинг';
+    }
+
+    .rounds__item--4:before {
+        content: 'Академия AGATECH';
+    }
+}
+
+
+
+.rounds__list2 {
+    .rounds__img {
+        animation: shake 10s linear infinite forwards;
+    }
+}
+
+
+.rounds__list3 {
+    .rounds__img {
+        animation: elastic 7s linear infinite forwards;
+    }
+}
+
+.rounds__list4 {
+    .rounds__img {
+        animation: zoom-in-out 7s linear infinite forwards;
+
+    }
+}
+
+.rounds__list5 {
+    .rounds__img {
+        animation: bounce-in 7s linear infinite forwards;
+
+    }
+}
+
+@-webkit-keyframes animate {
+    0% {
+        transform:rotate(0)
+    }
+    100% {
+        transform:rotate(360deg)
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform:rotate(0)
+    }
+    100% {
+        transform:rotate(360deg)
+    }
+}
+
+@-webkit-keyframes shake {
+    0%{ transform: rotate(-15deg); -webkit-transform: rotate(-15deg); }
+    2%{ transform: rotate(15deg); -webkit-transform: rotate(15deg); }
+    4%{ transform: rotate(-18deg); -webkit-transform: rotate(-18deg); }
+    6%{ transform: rotate(18deg); -webkit-transform: rotate(18deg); }
+    8%{ transform: rotate(-22deg); -webkit-transform: rotate(-22deg); }
+    10%{ transform: rotate(22deg); -webkit-transform: rotate(22deg); }
+    12%{ transform: rotate(-18deg); -webkit-transform: rotate(-18deg); }
+    14%{ transform: rotate(18deg); -webkit-transform: rotate(18deg); }
+    16%{ transform: rotate(-12deg); -webkit-transform: rotate(-12deg); }
+    18%{ transform: rotate(-12deg); -webkit-transform: rotate(-12deg); }
+    20%{ transform: rotate(0deg); -webkit-transform: rotate(0deg); }
+}
+
+@keyframes shake {
+    0%{ transform: rotate(-15deg); -ms-transform: rotate(-15deg); }
+    2%{ transform: rotate(15deg); -ms-transform: rotate(15deg); }
+    4%{ transform: rotate(-18deg); -ms-transform: rotate(-18deg); }
+    6%{ transform: rotate(18deg); -ms-transform: rotate(18deg); }
+    8%{ transform: rotate(-22deg); -ms-transform: rotate(-22deg); }
+    10%{ transform: rotate(22deg); -ms-transform: rotate(22deg); }
+    12%{ transform: rotate(-18deg); -ms-transform: rotate(-18deg); }
+    14%{ transform: rotate(18deg); -ms-transform: rotate(-18deg); }
+    16%{ transform: rotate(-12deg); -ms-transform: rotate(-12deg); }
+    18%{ transform: rotate(-12deg); -ms-transform: rotate(-12deg); }
+    20%{ transform: rotate(0deg); -ms-transform: rotate(0deg); }
+}
+
+@-webkit-keyframes elastic {
+    0%{ -webkit-transform: scale(1); transform: scale(1); }
+    30%{ -webkit-transform: scaleX(1.25) scaleY(0.75); transform: scaleX(1.25) scaleY(0.75); }
+    40%{ -webkit-transform: scaleX(0.75) scaleY(1.25); transform: scaleX(0.75) scaleY(1.25); }
+    60%{ -webkit-transform: scaleX(1.15) scaleY(0.85); transform: scaleX(1.15) scaleY(0.85); }
+    100%{ -webkit-transform: scale(1); transform: scale(1); }
+}
+
+@keyframes elastic {
+    0%{ -ms-transform: scale(1); transform: scale(1); }
+    30%{ -ms-transform: scaleX(1.25) scaleY(0.75); transform: scaleX(1.25) scaleY(0.75); }
+    40%{ -ms-transform: scaleX(0.75) scaleY(1.25); transform: scaleX(0.75) scaleY(1.25); }
+    60%{ -ms-transform: scaleX(1.15) scaleY(0.85); transform: scaleX(1.15) scaleY(0.85); }
+    100%{ -ms-transform: scale(1); transform: scale(1); }
+}
+
+@-webkit-keyframes zoom-in-out {
+    0%{ -webkit-transform: scale(1); transform: scale(1); }
+    50%{ -webkit-transform: scale(1.2); transform: scale(1.2); }
+    100%{ -webkit-transform: scale(1); transform: scale(1); }
+}
+
+@keyframes zoom-in-out {
+    0%{ -ms-transform: scale(1); transform: scale(1); }
+    50%{ -ms-transform: scale(1.2); transform: scale(1.2); }
+    100%{ -ms-transform: scale(1); transform: scale(1); }
+}
+
+@-webkit-keyframes bounce-in {
+    0%{ opacity: 0; -webkit-transform: scale(.3); transform: scale(.3); }
+    50%{ opacity: 1; -webkit-transform: scale(1.0); transform: scale(1.0); }
+    70%{ -webkit-transform: scale(0.9); transform: scale(0.9); }
+    100%{ -webkit-transform: scale(1); transform: scale(1); }
+}
+
+@keyframes bounce-in {
+    0%{ opacity: 0; transform: scale(.3); }
+    50%{ opacity: 1; transform: scale(1.0); }
+    70%{ transform: scale(0.9); }
+    100%{ transform: scale(1); }
+}

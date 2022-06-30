@@ -1,8 +1,12 @@
 body.lock {
-    overflow: hidden;
+    //overflow: hidden;
     //overflow-y: scroll;
+    //width: calc(100% - 17px);
 }
 
+body.lock .header {
+    //width: calc(100% - 17px);
+}
 
 .popup {
     position: fixed;
